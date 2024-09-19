@@ -1,4 +1,12 @@
-require("dotenv").config();
+const express = require("express");
+const app = express();
+const port = 3000;
+// create main route
+app.get("/", (req, res) => res.send("Hello World!"));
+// instantiate server
+app.listen(port, () =>
+  console.log(`App is listening at http://localhost:${port}`),
+);
 const { Client, Collection } = require("discord.js");
 const { QuickDB } = require("quick.db");
 
